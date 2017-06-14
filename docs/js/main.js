@@ -74,41 +74,49 @@ window.onload = function() {
     });
 
     // 대문의 경우
-    var gamePlayVideoElem = document.getElementById('game-play-video-orig');
-    if(gamePlayVideoElem !== null) {
-        // 초기 상태 : 이미지는 보이지만 동영상 관련은 숨김
-        // 동영상 재생을 시도하면 콜백이 불릴것이다
-        // 만약 콜백이 제대로 호출되면 이미지를 숨기고 동영상을 보여주기
-        // 초기 상태는 css로 통제
-
-        // video 이벤트
-        gamePlayVideoElem.onplay = function() {
-            var func = function() {
-                $('.cube-image').hide();
-                $('.cube-video').show();
-            }
-
-            var fired = false;
-            return function() {
-                if(!fired) {
-                    func();
-                }
-                fired = true;
-            }
-        }();
-
-        var seriously = new Seriously();
-        var source = seriously.source('#game-play-video-orig');
-        var target = seriously.target('#game-play-video-transparent');
-        var chroma = seriously.effect('chroma');
-
-        // connect all our nodes in the right order
-        chroma.source = source;
-        target.source = chroma;
-        seriously.go();
-
-        // 동영상 강제 재생
-        // 모바일에서는 display none이면 자동재생을 안하길래 수동으로
-        gamePlayVideoElem.play();
-    }
+    //playCubeVideo();
 };
+
+
+function playCubeVideo() {
+    var gamePlayVideoElem = document.getElementById('game-play-video-orig');
+    if(!gamePlayVideoElem) {
+        return false;
+    }
+    // 초기 상태 : 이미지는 보이지만 동영상 관련은 숨김
+    // 동영상 재생을 시도하면 콜백이 불릴것이다
+    // 만약 콜백이 제대로 호출되면 이미지를 숨기고 동영상을 보여주기
+    // 초기 상태는 css로 통제
+
+    // 동영상 활성화용
+    // video 이벤트
+    gamePlayVideoElem.onplay = function() {
+        var func = function() {
+            $('.cube-image').hide();
+            $('.cube-video').show();
+        }
+
+        var fired = false;
+        return function() {
+            if(!fired) {
+                func();
+            }
+            fired = true;
+        }
+    }();
+
+    var seriously = new Seriously();
+    var source = seriously.source('#game-play-video-orig');
+    var target = seriously.target('#game-play-video-transparent');
+    var chroma = seriously.effect('chroma');
+
+    // connect all our nodes in the right order
+    chroma.source = source;
+    target.source = chroma;
+    seriously.go();
+
+    // 동영상 강제 재생
+    // 모바일에서는 display none이면 자동재생을 안하길래 수동으로
+    gamePlayVideoElem.play();
+    return true;
+}
