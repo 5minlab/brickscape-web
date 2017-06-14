@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="/css/pure-min.css">
     <link rel="stylesheet" href="/css/grids-responsive-min.css">
     <link rel="stylesheet" href="/lib/magnific-popup-1.1.0/magnific-popup.css">
-    <link rel="stylesheet" href="/css/main.css?1497416874">
+    <link rel="stylesheet" href="/css/main.css?1497422408">
   </head>
   <body>
     <div class="body-top">
@@ -49,6 +49,12 @@
   <header class="header-cube">
     <section class="underlay-cube">
     </section>
+
+    <video id="game-play-video-orig" controls autoplay loop/>
+      <source src="/img/index/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <canvas id="game-play-video-transparent" width="640" height="480"></canvas>
   </header>
 </div>
 
@@ -205,8 +211,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="/lib/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="/lib/seriously.js/seriously.js"></script>
+    <script src="/lib/seriously.js/effects/seriously.chroma.js"></script>
 
-    <script src="/js/main.js?1497416874"></script>
+    <script src="/js/main.js?1497422408"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

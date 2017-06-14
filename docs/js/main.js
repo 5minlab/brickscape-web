@@ -72,4 +72,17 @@ window.onload = function() {
             });
         });
     });
+
+    // 대문의 경우
+    if(document.getElementById('game-play-video-orig') !== null) {
+        var seriously = new Seriously();
+        var source = seriously.source('#game-play-video-orig');
+        var target = seriously.target('#game-play-video-transparent');
+        var chroma = seriously.effect('chroma');
+
+        // connect all our nodes in the right order
+        chroma.source = source;
+        target.source = chroma;
+        seriously.go();
+    }
 };

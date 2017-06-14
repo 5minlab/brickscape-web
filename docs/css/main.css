@@ -113,6 +113,16 @@ table {
 @media only screen and (min-width: 720px) {
   .body-middle {
     height: 500px; } }
+#game-play-video-orig {
+  display: none; }
+
+#game-play-video-transparent {
+  width: auto;
+  height: 300px; }
+
+@media only screen and (min-width: 720px) {
+  #game-play-video-transparent {
+    height: 500px; } }
 .header-cube {
   margin: auto; }
 
@@ -126,7 +136,7 @@ table {
   */
   top: 0px;
   left: 0px;
-  background: transparent url(/img/index/cube.png) center center no-repeat;
+  background: transparent url(/img/index/cube-resize.png) center center no-repeat;
   background-size: contain;
   z-index: 1; }
 

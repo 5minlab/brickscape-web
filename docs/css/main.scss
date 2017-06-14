@@ -139,6 +139,19 @@ table {
     }
 }
 
+#game-play-video-orig {
+    display: none;
+}
+
+#game-play-video-transparent {
+    width: auto;
+    height: $title-cube-height-small;
+}
+@media only screen and (min-width: 720px) {
+    #game-play-video-transparent {
+        height: $title-cube-height-large;
+    }
+}
 
 .header-cube {
     margin: auto;
@@ -146,7 +159,7 @@ table {
 
 .header-cube .underlay-cube {
     width: 100%;
-    height: 300px;
+    height: $title-cube-height-small;
     position: relative;
     /*
     bg-top 다음에 이어졌으면 좋겠다
@@ -154,13 +167,13 @@ table {
     */
     top: 0px;
     left: 0px;
-    background: rgba(0, 0, 0, 0) url(/img/index/cube.png) center center no-repeat;
+    background: rgba(0, 0, 0, 0) url(/img/index/cube-resize.png) center center no-repeat;
     background-size: contain;
     z-index: 1;
 }
 @media only screen and (min-width: 720px) {
     .header-cube .underlay-cube {
-        height: 500px;
+        height: $title-cube-height-large;
     }
 }
 
