@@ -11,9 +11,25 @@
 
 body {
     font-family: 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
-    background: #313131;
+    background: #000;
     color: #fff;
 }
+
+.body-bottom {
+    /*
+    bottom background
+    start color : #977E5C
+    finish color : #977F5C
+    */
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+    background: #977E5C; /* Old browsers */
+    background: -moz-linear-gradient(top, #977E5C 0%, #977E5C 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #977E5C 0%,#977E5C 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #977E5C 0%,#977E5C 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#977E5C', endColorstr='#977E5C',GradientType=0 ); /* IE6-9 */
+}
+
 div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,fieldset,p,button,input,textarea,select,a {
     font-family: 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
 }
@@ -98,61 +114,83 @@ table {
     }
 }
 
-header {
-    background: #000;
-    margin: auto;
+.body-top {
+    /*
+    상단 배경
+    시작색 : 6A9386
+    종료색 : 6B9386
+    */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+    background: 6B9386; /* Old browsers */
+    background: -moz-linear-gradient(top, #6A9386 0%, #6B9386 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #6A9386 0%,#6B9386 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #6A9386 0%,#6B9386 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6A9386', endColorstr='#6B9386',GradientType=0 ); /* IE6-9 */
 }
+.header-title .game-logo {
+    padding: 50px 0 50px 0;
+}
+.header-title .game-logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
-header .underlay {
+    height: auto;
+    max-width: 300px;
     width: 100%;
-    height: 720px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background: #000 url(/img/index/topimage.jpg) center center no-repeat;
-    background-size: cover;
-    z-index: 1;
 }
 @media only screen and (min-width: 720px) {
-    header .underlay {
-        background-size: contain;
+    .header-title .game-logo img {
+        max-width: 400px;
     }
 }
 
-header {
-    height: 720px;
+
+
+.body-middle {
+    height: 300px;
+    background: #000 url(/img/index/cube-gradient.png);
+    background-size: contain;
+}
+@media only screen and (min-width: 720px) {
+    .body-middle {
+        height: 500px;
+    }
 }
 
-header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.header-cube {
+    margin: auto;
+}
+
+.header-cube .underlay-cube {
     width: 100%;
-    height: 100%;
-    z-index: 2;
+    height: 300px;
+    position: relative;
+    /*
+    bg-top 다음에 이어졌으면 좋겠다
+    top: 0px;
+    */
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0) url(/img/index/cube.jpg) center center no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+@media only screen and (min-width: 720px) {
+    .header-cube .underlay-cube {
+        height: 500px;
+    }
+}
+
+.play-trailer-wrapper {
     text-align: center;
+    padding: 10px 0 20px 0;
 }
-header .overlay .game-logo {
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+.play-trailer {
+    display: inline-block;
 }
-header .overlay .game-logo img {
-    height: auto;
-    max-width: 360px;
-    width: 100%;
-}
-header .overlay .play-trailer {
-    display: block;
-    position: absolute;
-    top: 340px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-header .overlay .play-trailer img {
+.play-trailer img {
     width: 80px;
 }
 
@@ -193,40 +231,39 @@ header .overlay .play-trailer img {
     height: 100%;
 }
 
-header .overlay .download {
-    position: absolute;
-    bottom: 5px;
+.download {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 
     font-size: 1.2em;
     color: #fdc444;
+    text-align: center;
 }
 
-header a {
+.download a {
     display: inline-block;
 }
 
-header .store-logo {
+.download .store-logo {
     box-sizing: border-box;
     width: auto;
     height: 80px;
 }
 
-header .store-logo-gearvr {
+.download .store-logo-gearvr {
     display: block;
     margin: 0 auto;
     padding: 10px 0;
 }
 
-header .store-logo-google-play {
+.download .store-logo-google-play {
     display: block;
     margin: 0 auto;
     padding: 10px 0;
 }
 
-header .store-logo-app-store {
+.download .store-logo-app-store {
     display: block;
     margin: 0 auto;
     padding: 10px 0;
@@ -242,10 +279,15 @@ header .store-logo-app-store {
 .index-desc-large {
     margin: auto;
     width: 100%;
-    max-width: 650px;
     padding: 30px 0;
 }
 
+.index-desc-summary {
+    margin: auto;
+    width: 100%;
+    padding: 30px 0;
+    font-size: 1em;
+}
 
 .content {
     margin: auto;
@@ -254,7 +296,8 @@ header .store-logo-app-store {
 }
 
 .list-features {
-    padding: 10px 0 10px 5.0em;
+    padding: 10px 0 10px 3.0em;
+    font-size: 0.8em;
 }
 
 .list-features li {

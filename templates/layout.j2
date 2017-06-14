@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Brickscape</title>
+    <meta name="description" content="Brickscape website">
+    <meta name="keywords" content="game, mobile game, brickscape">
+    <meta name="author" content="5minlab, contact@5minlab.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- http://www.favicon-generator.org/ -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="/css/pure-min.css">
+    <link rel="stylesheet" href="/css/grids-responsive-min.css">
+    <link rel="stylesheet" href="/lib/magnific-popup-1.1.0/magnific-popup.css">
+    <link rel="stylesheet" href="/css/main.css?{{timestamp}}">
+  </head>
+  <body>
+    {% block body_top %}
+    {% endblock %}
+
+    {% block body_middle %}
+    {% endblock %}
+
+    <div class="body-bottom">
+    {% block content %}
+    {% endblock  %}
+    </div>
+
+    <footer class="pure-g footer-tail">
+      <div class="pure-u-1">
+        <a href="//5minlab.com" target="_blank">
+          <img src="/img/logos/5minlab-logo-orig.png" class="pure-img company-logo"/>
+        </a>
+
+        <p class="">
+        <small>
+          © 2017 5minlab Co., Ltd.
+          All rights reserved.
+        </small>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/lib/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script src="/js/main.js?{{timestamp}}"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-66505862-1','auto');ga('send','pageview');
+    </script>
+  </body>
+</html>

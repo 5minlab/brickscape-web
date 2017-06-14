@@ -1,0 +1,24 @@
+{% extends 'layout.j2' %}
+
+{% block content %}
+<div class="pure-g">
+  <div class="pure-u-1 press-content">
+    <a href="{{ root_link }}">
+    <img src="/img/logos/resized-logo.png" class="pure-img"/>
+    </a>
+
+    {{ press_html }}
+
+    <h2>{{ game_info_title }}</h2>
+    {{ game_info_html }}
+  </div>
+</div>
+
+<footer class="pure-g content footer-head">
+  <ul class="pure-u-1">
+    <li class="upper-case">
+      Go back to Toy Clash <a href="{{ root_link }}" class="upper-case">Homepage</a>
+    </li>
+  </ul>
+</footer>
+{% endblock %}
