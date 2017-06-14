@@ -12,8 +12,24 @@
         url(/fonts/BIG_JOHN-webfont.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: "NotoSans-Bold";
+    src:url(/fonts/NotoSans-Bold-webfont.eot);
+    src:url(/fonts/NotoSans-Bold-webfont.eot?#iefix) format('embedded-opentype'),
+        url(/fonts/NotoSans-Bold-webfont.woff) format('woff'),
+        url(/fonts/NotoSans-Bold-webfont.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "NotoSans-Regular";
+    src:url(/fonts/NotoSans-Regular-webfont.eot);
+    src:url(/fonts/NotoSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),
+        url(/fonts/NotoSans-Regular-webfont.woff) format('woff'),
+        url(/fonts/NotoSans-Regular-webfont.ttf) format('truetype');
+}
+
 body {
-    font-family: 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
+    font-family: 'NotoSans-Regular', 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
     background: #000;
     color: #fff;
 }
@@ -23,7 +39,7 @@ body {
 }
 
 div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,fieldset,p,button,input,textarea,select,a {
-    font-family: 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
+    font-family: 'NotoSans-Regular', 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
 }
 
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,dialog,div,dl,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,html,i,iframe,img,ins,kbd,label,legend,li,main,mark,menu,meter,nav,object,ol,output,p,pre,progress,q,rp,rt,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video,xmp {
@@ -35,7 +51,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 .upper-case {
-    font-family: 'BIGJOHN';
     text-transform: uppercase;
 }
 
