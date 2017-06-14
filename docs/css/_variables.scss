@@ -1,12 +1,5 @@
 @charset "utf-8";
 
 // 배경 그라데이션
-// top...start...<cube>...end...bottom
-// 큐브 영역의 그라데이션 색을 별도 지정가능
-$gradient-color-top: #6A9386;
-$gradient-color-start: #6B9386;
-$gradient-color-end: #977E5C;
-$gradient-color-bottom: #977F5C;
-
-$title-cube-height-large: 500px;
-$title-cube-height-small: 300px;
+$gradient-color-begin: #00819A;
+$gradient-color-end: #9A4C6A;

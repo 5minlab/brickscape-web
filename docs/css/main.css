@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.upper-case {
+  text-transform: uppercase; }
+
 @font-face {
   font-family: "BIGJOHN";
   src: url(/fonts/BIG_JOHN-webfont.eot);
@@ -13,13 +16,10 @@
   src: url(/fonts/NotoSans-Regular-webfont.eot?#iefix) format("embedded-opentype"), url(/fonts/NotoSans-Regular-webfont.woff) format("woff"), url(/fonts/NotoSans-Regular-webfont.ttf) format("truetype"); }
 body {
   font-family: 'NotoSans-Regular', 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
-  background: #000;
-  color: #fff; }
-
-.body-bottom {
-  background-image: linear-gradient(to bottom, #977E5C 0%, #977F5C 100%);
+  background-image: linear-gradient(to bottom, #00819A 0%, #9A4C6A 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF977E5C', endColorstr='#FF977F5C', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00819A', endColorstr='#FF9A4C6A', GradientType=0);
+  color: #fff; }
 
 div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, form, fieldset, p, button, input, textarea, select, a {
   font-family: 'NotoSans-Regular', 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif; }
@@ -30,10 +30,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   padding: 0;
   /*font-size: 100%;*/
   font-size: 1.05em; }
-
-.upper-case {
-  font-family: 'NotoSans-Bold';
-  text-transform: uppercase; }
 
 img {
   color: transparent;
@@ -93,11 +89,6 @@ table {
   p {
     padding-left: 10px;
     padding-right: 10px; } }
-.body-top {
-  background-image: linear-gradient(to bottom, #6A9386 0%, #6B9386 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6A9386', endColorstr='#FF6B9386', GradientType=0); }
-
 .header-title .game-logo {
   padding: 50px 0 50px 0; }
 
@@ -112,45 +103,40 @@ table {
 @media only screen and (min-width: 720px) {
   .header-title .game-logo img {
     max-width: 400px; } }
+/*
 .body-middle {
-  height: 300px;
-  background-image: linear-gradient(to bottom, #6B9386 0%, #977E5C 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6B9386', endColorstr='#FF977E5C', GradientType=0); }
-
+    height: 300px;
+    @include gradient-y($gradient-color-start, $gradient-color-end, 0%);
+}
 @media only screen and (min-width: 720px) {
-  .body-middle {
-    height: 500px; } }
-#game-play-video-orig {
+    .body-middle {
+        height: 500px;
+    }
+}
+*/
+.header-cube .cube-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; }
+
+.header-cube .cube-video {
   display: none; }
+  .header-cube .cube-video #game-play-video-orig {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 1px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; }
+  .header-cube .cube-video #game-play-video-transparent {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; }
 
-#game-play-video-transparent {
-  width: auto;
-  height: 300px; }
-
-@media only screen and (min-width: 720px) {
-  #game-play-video-transparent {
-    height: 500px; } }
-.header-cube {
-  margin: auto; }
-
-.header-cube .underlay-cube {
-  width: 100%;
-  height: 300px;
-  position: relative;
-  /*
-  bg-top 다음에 이어졌으면 좋겠다
-  top: 0px;
-  */
-  top: 0px;
-  left: 0px;
-  background: transparent url(/img/index/cube-resize.png) center center no-repeat;
-  background-size: contain;
-  z-index: 1; }
-
-@media only screen and (min-width: 720px) {
-  .header-cube .underlay-cube {
-    height: 500px; } }
 .play-trailer-wrapper {
   text-align: center;
   padding: 10px 0 20px 0; }
@@ -274,27 +260,27 @@ table {
 
 @media only screen and (min-width: 720px) {
   .popup-gallery {
-    height: 1200px;
+    height: 1300px;
     position: relative; }
 
   .cube-wrapper-1 {
     position: absolute;
     top: 0px;
-    padding-left: 200px; }
+    padding-left: 300px; }
 
   .cube-wrapper-2 {
     position: absolute;
-    top: 200px;
+    top: 300px;
     padding-right: 200px; }
 
   .cube-wrapper-3 {
     position: absolute;
-    top: 400px;
-    padding-left: 200px; }
+    top: 600px;
+    padding-left: 300px; }
 
   .cube-wrapper-4 {
     position: absolute;
-    top: 600px;
+    top: 900px;
     padding-right: 200px; } }
 .screenshot {
   padding: 3px;

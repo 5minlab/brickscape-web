@@ -1,32 +1,32 @@
 {% extends 'layout.j2' %}
 
-{% block body_top %}
-<div class="body-top">
-  <header class="header-title">
-    <h1 hidden>Brickscape</h1>
-    <div class="game-logo">
-      <img src="/img/logos/title.png"/>
-    </div>
-  </header>
-</div>
-{% endblock %}
+{% block content %}
+{# game title #}
+<header class="header-title">
+  <h1 hidden>Brickscape</h1>
+  <div class="game-logo">
+    <img src="/img/logos/title.png"/>
+  </div>
+</header>
 
-{% block body_middle %}
-<div class="body-middle">
-  <header class="header-cube">
-    <section class="underlay-cube">
-    </section>
+{# cube #}
+<header class="header-cube">
+  {# cube image #}
+  <div class="cube-image">
+    <img src="/img/index/cube-resize.png"/>
+  </div>
 
-    <video id="game-play-video-orig" controls autoplay loop/>
+  {# cube video #}
+  <div class="cube-video">
+    <video id="game-play-video-orig" width="480" height="320" loop muted/>
       <source src="/img/index/video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <canvas id="game-play-video-transparent" width="640" height="480"></canvas>
-  </header>
-</div>
-{% endblock %}
+  </div>
+</header>
 
-{% block content %}
+{# play trailer #}
 <div class="play-trailer-wrapper">
   <a href="#" class="play-trailer">
     <img src="/img/index/moviebt.png"/>
@@ -42,6 +42,7 @@
   </div>
 </section>
 
+{# download badges #}
 <div class="download">
   <a href="https://play.google.com/store/apps/details?id=com.fiveminlab.brickscape" class="anchor" target="_blank">
     <img src="/img/index/badges/en_badge_web_generic.png" class="pure-img store-logo store-logo-google-play" alt="google play version/">
@@ -52,6 +53,7 @@
   </a>
 </div>
 
+{# content #}
 <div class="content">
 <div class="pure-g">
   <div class="pure-u-1">
@@ -63,6 +65,7 @@
   </div>
 </div>
 
+{# screenshots #}
 <div class="pure-g popup-gallery">
   <div class="cube-wrapper cube-wrapper-1">
     <a href="/img/screenshots/resize_large_01.jpg" title="">
@@ -88,6 +91,7 @@
     </a>
   </div>
 </div>
+
 
 <div class="pure-g">
   <div class="pure-u-1">

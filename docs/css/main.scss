@@ -2,40 +2,13 @@
 
 @import "variables";
 @import "mixins";
-
-@font-face {
-    font-family: "BIGJOHN";
-    src:url(/fonts/BIG_JOHN-webfont.eot);
-    src:url(/fonts/BIG_JOHN-webfont.eot?#iefix) format('embedded-opentype'),
-        url(/fonts/BIG_JOHN-webfont.woff2) format('woff2'),
-        url(/fonts/BIG_JOHN-webfont.woff) format('woff'),
-        url(/fonts/BIG_JOHN-webfont.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: "NotoSans-Bold";
-    src:url(/fonts/NotoSans-Bold-webfont.eot);
-    src:url(/fonts/NotoSans-Bold-webfont.eot?#iefix) format('embedded-opentype'),
-        url(/fonts/NotoSans-Bold-webfont.woff) format('woff'),
-        url(/fonts/NotoSans-Bold-webfont.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: "NotoSans-Regular";
-    src:url(/fonts/NotoSans-Regular-webfont.eot);
-    src:url(/fonts/NotoSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),
-        url(/fonts/NotoSans-Regular-webfont.woff) format('woff'),
-        url(/fonts/NotoSans-Regular-webfont.ttf) format('truetype');
-}
+@import "utilities";
+@import "fonts";
 
 body {
     font-family: 'NotoSans-Regular', 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
-    background: #000;
+    @include gradient-y($gradient-color-begin, $gradient-color-end, 0%);
     color: #fff;
-}
-
-.body-bottom {
-    @include gradient-y($gradient-color-end, $gradient-color-bottom, 0%);
 }
 
 div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,fieldset,p,button,input,textarea,select,a {
@@ -48,10 +21,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     padding: 0;
     /*font-size: 100%;*/
     font-size: 1.05em;
-}
-
-.upper-case {
-    text-transform: uppercase;
 }
 
 img {
@@ -121,9 +90,6 @@ table {
     }
 }
 
-.body-top {
-    @include gradient-y($gradient-color-top, $gradient-color-start, 0%);
-}
 .header-title .game-logo {
     padding: 50px 0 50px 0;
 }
@@ -144,6 +110,7 @@ table {
 
 
 
+/*
 .body-middle {
     height: 300px;
     @include gradient-y($gradient-color-start, $gradient-color-end, 0%);
@@ -153,42 +120,37 @@ table {
         height: 500px;
     }
 }
+*/
 
-#game-play-video-orig {
+.header-cube .cube-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+.header-cube .cube-video {
     display: none;
-}
 
-#game-play-video-transparent {
-    width: auto;
-    height: $title-cube-height-small;
-}
-@media only screen and (min-width: 720px) {
-    #game-play-video-transparent {
-        height: $title-cube-height-large;
+    #game-play-video-orig {
+        // display: none으로 하면
+        // PC에서는 문제 없는데
+        // 모바일에서는 자동재생이 되지 않더라
+        // 그래서 구석에 1px로 만들어서 숨김
+        position: absolute;
+        bottom: 0px;
+        display: block;
+        width: 1px;
+        height: 1px;
+
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
     }
-}
-
-.header-cube {
-    margin: auto;
-}
-
-.header-cube .underlay-cube {
-    width: 100%;
-    height: $title-cube-height-small;
-    position: relative;
-    /*
-    bg-top 다음에 이어졌으면 좋겠다
-    top: 0px;
-    */
-    top: 0px;
-    left: 0px;
-    background: rgba(0, 0, 0, 0) url(/img/index/cube-resize.png) center center no-repeat;
-    background-size: contain;
-    z-index: 1;
-}
-@media only screen and (min-width: 720px) {
-    .header-cube .underlay-cube {
-        height: $title-cube-height-large;
+    #game-play-video-transparent {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
     }
 }
 
@@ -360,27 +322,27 @@ table {
 }
 @media only screen and (min-width: 720px) {
     .popup-gallery {
-        height: 1200px;
+        height: 1300px;
         position: relative;
     }
     .cube-wrapper-1 {
         position: absolute;
         top: 0px;
-        padding-left: 200px;
+        padding-left: 300px;
     }
     .cube-wrapper-2 {
         position: absolute;
-        top: 200px;
+        top: 300px;
         padding-right: 200px;
     }
     .cube-wrapper-3 {
         position: absolute;
-        top: 400px;
-        padding-left: 200px;
+        top: 600px;
+        padding-left: 300px;
     }
     .cube-wrapper-4 {
         position: absolute;
-        top: 600px;
+        top: 900px;
         padding-right: 200px;
     }
 }
