@@ -9,22 +9,9 @@ body {
   color: #fff; }
 
 .body-bottom {
-  /*
-  bottom background
-  start color : #977E5C
-  finish color : #977F5C
-  */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
-  background: #977E5C;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #977E5C 0%, #977E5C 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #977E5C 0%, #977E5C 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #977E5C 0%, #977E5C 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#977E5C', endColorstr='#977E5C',GradientType=0 );
-  /* IE6-9 */ }
+  background-image: linear-gradient(to bottom, #977E5C 0%, #977F5C 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF977E5C', endColorstr='#FF977F5C', GradientType=0); }
 
 div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, form, fieldset, p, button, input, textarea, select, a {
   font-family: 'Montserrat','NanumGothic','나눔고딕','NanumGothicWeb',ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif; }
@@ -99,22 +86,9 @@ table {
     padding-left: 10px;
     padding-right: 10px; } }
 .body-top {
-  /*
-  상단 배경
-  시작색 : 6A9386
-  종료색 : 6B9386
-  */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
-  background: 6B9386;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #6A9386 0%, #6B9386 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #6A9386 0%, #6B9386 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #6A9386 0%, #6B9386 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6A9386', endColorstr='#6B9386',GradientType=0 );
-  /* IE6-9 */ }
+  background-image: linear-gradient(to bottom, #6A9386 0%, #6B9386 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6A9386', endColorstr='#FF6B9386', GradientType=0); }
 
 .header-title .game-logo {
   padding: 50px 0 50px 0; }
@@ -132,8 +106,9 @@ table {
     max-width: 400px; } }
 .body-middle {
   height: 300px;
-  background: #000 url(/img/index/cube-gradient.png);
-  background-size: contain; }
+  background-image: linear-gradient(to bottom, #6B9386 0%, #977E5C 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6B9386', endColorstr='#FF977E5C', GradientType=0); }
 
 @media only screen and (min-width: 720px) {
   .body-middle {
