@@ -322,13 +322,52 @@ table {
 
 .footer-tail {
     text-align: center;
-    background: #000;
     margin: auto;
     width: 100%;
     padding-bottom: 30px;
 }
 .footer-tail small {
     font-size: 70%;
+}
+
+// PC에서는 자유로운 배치
+// 모바일은 일렬로 배치
+// 모바일에서 리사이징까지 고려해서 위치잡기 어려우니까
+.popup-gallery {
+}
+.cube-wrapper-1 {
+}
+.cube-wrapper-2 {
+}
+.cube-wrapper-3 {
+}
+.cube-wrapper-4 {
+}
+@media only screen and (min-width: 720px) {
+    .popup-gallery {
+        height: 1200px;
+        position: relative;
+    }
+    .cube-wrapper-1 {
+        position: absolute;
+        top: 0px;
+        padding-left: 200px;
+    }
+    .cube-wrapper-2 {
+        position: absolute;
+        top: 200px;
+        padding-right: 200px;
+    }
+    .cube-wrapper-3 {
+        position: absolute;
+        top: 400px;
+        padding-left: 200px;
+    }
+    .cube-wrapper-4 {
+        position: absolute;
+        top: 600px;
+        padding-right: 200px;
+    }
 }
 
 .screenshot {

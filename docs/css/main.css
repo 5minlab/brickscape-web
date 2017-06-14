@@ -257,7 +257,6 @@ table {
 
 .footer-tail {
   text-align: center;
-  background: #000;
   margin: auto;
   width: 100%;
   padding-bottom: 30px; }
@@ -265,6 +264,30 @@ table {
 .footer-tail small {
   font-size: 70%; }
 
+@media only screen and (min-width: 720px) {
+  .popup-gallery {
+    height: 1200px;
+    position: relative; }
+
+  .cube-wrapper-1 {
+    position: absolute;
+    top: 0px;
+    padding-left: 200px; }
+
+  .cube-wrapper-2 {
+    position: absolute;
+    top: 200px;
+    padding-right: 200px; }
+
+  .cube-wrapper-3 {
+    position: absolute;
+    top: 400px;
+    padding-left: 200px; }
+
+  .cube-wrapper-4 {
+    position: absolute;
+    top: 600px;
+    padding-right: 200px; } }
 .screenshot {
   padding: 3px;
   box-sizing: border-box;
