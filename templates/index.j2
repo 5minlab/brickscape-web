@@ -59,8 +59,7 @@
   <div class="pure-u-1">
     <p class="index-desc index-desc-large">
       <span>
-      Addictive 3D puzzle to wake up your brain<br/>
-      Move bricks to take out the Core Brick
+      {{ short_desc | nl2br }}
       </span>
     </p>
   </div>
@@ -97,7 +96,7 @@
 <div class="pure-g">
   <div class="pure-u-1">
     <h2 class="index-desc upper-case subtitle">
-      How to play
+      {{ how_to_play }}
     </h2>
   </div>
 </div>
@@ -105,9 +104,7 @@
 <div class="pure-g">
   <div class="pure-u-1">
     <p class="index-desc">
-      Move Core Brick to the exit.<br/>
-      Every brick has to be moved in an elongated direction.<br/>
-      You can't move bricks out of the box.
+      {{ how_to_play_content | nl2br }}
     </p>
   </div>
 </div>
@@ -115,22 +112,16 @@
 <div class="pure-g">
   <div class="pure-u-1">
     <h2 class="index-desc upper-case subtitle">
-      Features
+      {{ feature }}
     </h2>
   </div>
 </div>
 
 <div class="pure-g">
   <ul class="pure-u-1 list-features">
-    <li class="">Meet more than <b>600 brain teasing stages</b> in 12 aesthetic themes.</li>
-    <li class=""><b>Simple and easy</b> play for everyone.</li>
-    <li class="">5 difficulty levels; from easy to master.</li>
-    <li class=""><b>Choose your favorite level</b>: You don't need to clear them in order.</li>
-    <li class=""><b>Daily Puzzle Mode</b>: Compete with other players around the world.</li>
-    <li class="">Unlike other puzzle games, <b>there is no time limit</b>.</li>
-    <li class="">Enjoy our <b>brilliant and unique brick texture and sound design</b>.</li>
-    <li class=""><b/>Ask for 'Hint'</b> when needed, and use <b>'Undo'</b> feature to correct mistakes.</li>
-    <li class=""><b>No Internet connection required</b> to play.</li>
+    {% for el in feature_list %}
+    <li class="">{{ el }}</li>
+    {% endfor %}
   </ul>
 </div>
 
@@ -138,8 +129,7 @@
   <div class="pure-u-1">
     <p class="index-desc index-desc-summary subtitle upper-case">
       <span>
-      Play Brickscape now<br/>
-      on your phones and tablets!
+      {{ play_message }}
       </span>
     </p>
   </div>
