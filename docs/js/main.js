@@ -21,6 +21,36 @@
     }
 }());
 
+function getLanguage() {
+    // chrome
+    // ko-KR
+    if(navigator.language) {
+        return navigator.language;
+    }
+
+    // ie
+    // ko-KR
+    if(navigator.userLanguage) {
+        return navigator.userLanguage;
+    }
+    if(navigator.browserLanguage) {
+        return navigator.browserLanguage;
+    }
+    if(navigator.systemLanguage) {
+        return navigator.systemLanguage;
+    }
+    // default value
+    return 'en';
+}
+
+// 대문인 경우에만 언어 분기
+if(location.pathname == "/" || location.pathname == "index.html") {
+    var lang = getLanguage();
+    if(lang.startsWith('ko')) {
+        location.href='/ko';
+    }
+}
+
 // Place any jQuery/helper plugins in here.
 
 var chroma = null;
