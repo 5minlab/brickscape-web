@@ -1,5 +1,5 @@
-# toyclash.com
-toyclash.com
+# brickscape.5minlab.com
+brickscape.5minlab.com
 
 ## Build
 ```bash
